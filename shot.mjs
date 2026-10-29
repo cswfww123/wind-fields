@@ -9,6 +9,7 @@ const EXEC = path.join(
 
 const out = process.argv[2] || 'shots/shot.png';
 const waitMs = Number(process.argv[3] || 4200);
+const query = process.argv[4] || '';
 
 const browser = await chromium.launch({
   executablePath: EXEC,
@@ -20,12 +21,14 @@ const logs = [];
 page.on('console', (m) => logs.push(`[${m.type()}] ${m.text()}`));
 page.on('pageerror', (e) => logs.push(`[pageerror] ${e.message}`));
 
-await page.goto('http://127.0.0.1:5199/index.html', { waitUntil: 'load' });
+const port = process.env.PORT || 5199;
+await page.goto(`http://127.0.0.1:${port}/index.html${query}`, { waitUntil: 'load' });
 await page.waitForTimeout(waitMs);
 await page.screenshot({ path: out });
 
 const info = await page.evaluate(() => ({
   frames: window.__frames || 0,
+  stats: window.__stats || null,
   webgl: (() => {
     const c = document.createElement('canvas');
     const gl = c.getContext('webgl2');
