@@ -1,0 +1,20 @@
+{
+  "name": "wind-fields",
+  "version": "1.0.0",
+  "description": "俯视撕纸风 WebGL 场景复刻（Three.js）",
+  "main": "index.js",
+  "scripts": {
+    "start": "python3 -m http.server 5199"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.64.1"
+  },
+  "private": true
+}
