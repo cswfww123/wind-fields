@@ -1,5 +1,10 @@
 # 风过荒野 · 俯视撕纸场景复刻
 
+**🔗 在线演示：<https://cswfww123.github.io/wind-fields/>**
+
+（鼠标移进画面可以接管飞机；左键顺时针翻滚、右键逆时针翻滚；顶部标签切场景）
+
+
 ![赤土荒野](previews/preview-desert.png)
 
 | 草原河流 | 蓝金田野 | 赤土荒野 | 碧海沙洲 |
@@ -428,8 +433,8 @@ npm start         # http://127.0.0.1:5199
 `index.html` 的 importmap 指向它。所以运行时不依赖 `node_modules`，
 任何静态托管都能直接跑（GitHub Pages / Cloudflare Pages / Vercel / Netlify 都行）。
 
-**GitHub Pages**：免费账号只支持**公开仓库**的 Pages（私有仓库需要 Pro）。
-仓库转公开后：
+**GitHub Pages**（已部署）：<https://cswfww123.github.io/wind-fields/>
+免费账号只支持**公开仓库**的 Pages（私有仓库需要 Pro）。换仓库的话：
 
 ```bash
 gh repo edit cswfww123/wind-fields --visibility public --accept-visibility-change-consequences
