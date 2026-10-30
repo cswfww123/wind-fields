@@ -1,7 +1,7 @@
 {
   "name": "wind-fields",
   "version": "1.0.0",
-  "description": "俯视撕纸风 WebGL 场景复刻（Three.js）",
+  "description": "宫崎骏式夏天的 2.5D 飞行场景（Three.js）",
   "main": "index.js",
   "scripts": {
     "start": "python3 serve.py 5199"
